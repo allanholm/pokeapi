@@ -1,0 +1,14 @@
+.pokemonList{
+    margin: 10px auto;
+    background-color: lightgrey;
+}
+
+.pokemonList__listItem{
+    display:block;
+    text-decoration: none;
+    color: black;
+}
+
+.pokemonList__listItem:visited{
+    text-decoration: none;
+}
