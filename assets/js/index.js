@@ -1,19 +1,12 @@
-fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0') 
-    .then(response => response.json())
-    .then(data => showPokemon(data));
+import fetchForList from "./fetch-liste.js";
+import knapFunktion from "./next-page-list.js";
 
-const pokediv = document.querySelector("#pokemonList");
+let index = 0;
 
-function showPokemon(pokedex) {
-    console.log(pokedex.results);
-    
-    pokedex.results.forEach(pokemon => {
+fetchForList(index);
 
-    let pokemonName = document.createElement("a");
-    pokemonName.innerHTML = pokemon.name;
-    pokemonName.href = "detailedView.html?id=" + pokemon.name;
-    pokemonName.className = "pokemonList__listItem";
-
-    pokediv.append(pokemonName);
-});
-}
+let arrows = document.querySelectorAll("i");
+arrows.forEach(arrow => arrow.addEventListener("click", function(e){
+    let id = e.target.id;
+    index = knapFunktion(id, index);
+}));
