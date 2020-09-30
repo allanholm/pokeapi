@@ -1,4 +1,4 @@
-import {  urlGetKey } from "./urlHandler.js";
+import { urlGetKey } from "./urlHandler.js";
 import createPokemon from "./makeDetaliedPokemon.js";
 
 fetch('https://pokeapi.co/api/v2/pokemon/' + urlGetKey("id")) 

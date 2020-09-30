@@ -1,7 +1,11 @@
 import fetchForList from "./fetch-liste.js";
+import { setURL, urlGetKey } from "./urlHandler.js";
 
-function knapFunktion(id, index) {
-    if (id === "next") {
+function knapFunktion(e) {
+
+    let index =  parseInt(urlGetKey("offset"));
+
+    if (e.target.id === "next") {
         if (index < 140) {
             index = index + 10;
         } else {
@@ -14,8 +18,11 @@ function knapFunktion(id, index) {
             index = index - 10;
         }
     }
-    console.log(index);
-    fetchForList(index);
+
+    let newURL = "index.html?offset=" + index;
+    setURL(newURL);
+
+    fetchForList(urlGetKey("offset"));
     return index;
 }
 
