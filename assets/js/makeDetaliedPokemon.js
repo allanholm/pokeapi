@@ -15,7 +15,10 @@ function createPokemon(pokemon){
     pokemonType.innerText = "Type: " + CFletter(pokemon.types[0].type.name);
     pokemonType.className = "pokemonContainer__pokemonType"
 
-    pokemonContainer.append(pokemonName, pokemonImg, pokemonType);
+    let pokemonAttack = document.createElement("h3");
+    pokemonAttack.innerText = CFletter(pokemon.abilities[0].ability.name) + ":";
+
+    pokemonContainer.append(pokemonName, pokemonImg, pokemonType, pokemonAttack);
 }
 
 export default createPokemon;

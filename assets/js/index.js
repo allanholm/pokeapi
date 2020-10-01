@@ -1,12 +1,11 @@
 import fetchForList from "./fetch-liste.js";
 import knapFunktion from "./next-page-list.js";
-import { urlGetKey } from "./urlHandler.js";
+import { setURL, urlGetKey } from "./urlHandler.js";
 
 let index = 0;
-const url = new URL("http://index.html");
 
-url.searchParams.set("offset", index);
-url.searchParams.set("page_type", "list");
+let newURL = "index.html?offset=" + index;
+setURL(newURL);
 
 fetchForList(urlGetKey("offset"));
 
