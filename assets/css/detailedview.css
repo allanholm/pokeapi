@@ -1,8 +1,17 @@
 #pokemonContainer{
     max-width: 350px;
-    margin: auto;
+    margin: 10px auto;
     display: grid;
     justify-items: center;
+    border: 15px solid beige;
+    border-radius: 5%;
+    padding: 10px;
+    background-color: 	hsl(240, 20%, 95%);
+}
+.pokemonContainer__header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .pokemonContainer__pokemonName{
     font-size: 2em;
@@ -12,4 +21,12 @@
 }
 .pokemonContainer__pokemonType{
     display: inline;
+}
+.pokemonContainer__pokemonImg{
+    border: 5px solid beige;
+    background-color: white;
+
+}
+.pokemonContainer__pokemonHP{
+    text-align: right;
 }
