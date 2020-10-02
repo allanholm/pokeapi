@@ -14,8 +14,4 @@ function urlGetKey(key) {
     return value;
 }
 
-function loadURL(url) {
-    window.location.href = url;
-}
-
-export { setURL, urlGetKey, loadURL };
+export { setURL, urlGetKey };
