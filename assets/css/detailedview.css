@@ -6,7 +6,7 @@
     border: 15px solid beige;
     border-radius: 5%;
     padding: 10px;
-    background-color: 	hsl(240, 20%, 95%);
+    background-color:hsl(240, 20%, 95%);
 }
 .pokemonContainer__header{
     display: grid;
