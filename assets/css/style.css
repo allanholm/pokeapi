@@ -1,0 +1,7 @@
+@import "./detailedview.css";
+@import "./listview.css";
+body{
+    max-width: 960px;
+    margin: auto;
+    font-family: 'VT323', monospace;
+}

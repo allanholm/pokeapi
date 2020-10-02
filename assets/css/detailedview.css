@@ -1,0 +1,15 @@
+#pokemonContainer{
+    max-width: 350px;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+}
+.pokemonContainer__pokemonName{
+    font-size: 2em;
+}
+.pokemonAttack__name{
+    font-size: 1.2em;
+}
+.pokemonContainer__pokemonType{
+    display: inline;
+}
