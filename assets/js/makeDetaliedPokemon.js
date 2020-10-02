@@ -3,9 +3,18 @@ import CFletter from "./capitalize-first-letter.js";
 function createPokemon(pokemon){
     const pokemonContainer = document.querySelector("#pokemonContainer");
 
+    let pokemonHeader = document.createElement("div");
+    pokemonHeader.className = "pokemonContainer__header";
+
     let pokemonName= document.createElement("h1");
     pokemonName.innerText = CFletter(pokemon.name);
     pokemonName.className = "pokemonContainer__pokemonName";
+
+    let pokemonHP = document.createElement("p");
+    pokemonHP.innerText = pokemon.stats[0].base_stat + " HP";
+    pokemonHP.className = "pokemonContainer__pokemonHP";
+
+    pokemonHeader.append(pokemonName, pokemonHP);
 
     let pokemonImg = document.createElement("img");
     pokemonImg.src = pokemon.sprites.front_default;
@@ -22,7 +31,7 @@ function createPokemon(pokemon){
         let pokemonType2 = document.createElement("p");
         pokemonType2.innerText = " / " + CFletter(pokemon.types[1].type.name);
         pokemonType2.className = "pokemonContainer__pokemonType";
-        pokemonTypes.append(pokemonType2);
+        pokemonType.append(pokemonType2);
     }
 
     let pokemonAttack = document.createElement("div");
@@ -42,7 +51,7 @@ function createPokemon(pokemon){
 
     pokemonAttack.append(pokemonAttackName, pokemonAttackDesc);
 
-    pokemonContainer.append(pokemonName, pokemonImg, pokemonTypes, pokemonAttack);
+    pokemonContainer.append(pokemonHeader, pokemonImg, pokemonTypes, pokemonAttack);
 }
 
 export default createPokemon;
