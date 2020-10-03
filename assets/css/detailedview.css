@@ -19,9 +19,6 @@
 .pokemonAttack__name{
     font-size: 1.2em;
 }
-.pokemonContainer__pokemonType{
-    display: inline;
-}
 .pokemonContainer__pokemonImg{
     border: 5px solid beige;
     background-color: white;

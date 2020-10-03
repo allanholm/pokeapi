@@ -20,17 +20,12 @@ function createPokemon(pokemon){
     pokemonImg.src = pokemon.sprites.front_default;
     pokemonImg.className = "pokemonContainer__pokemonImg";
     
-    let pokemonTypes = document.createElement("div");
-
     let pokemonType = document.createElement("p");
     pokemonType.innerText = "Type: " + CFletter(pokemon.types[0].type.name);
     pokemonType.className = "pokemonContainer__pokemonType";
-    pokemonTypes.append(pokemonType);
 
     if (pokemon.types.length > 1) {
-        let pokemonType2 = document.createElement("p");
-        pokemonType2.innerText = " / " + CFletter(pokemon.types[1].type.name);
-        pokemonType2.className = "pokemonContainer__pokemonType";
+        let pokemonType2 = " / " + CFletter(pokemon.types[1].type.name);
         pokemonType.append(pokemonType2);
     }
 
@@ -51,7 +46,7 @@ function createPokemon(pokemon){
 
     pokemonAttack.append(pokemonAttackName, pokemonAttackDesc);
 
-    pokemonContainer.append(pokemonHeader, pokemonImg, pokemonTypes, pokemonAttack);
+    pokemonContainer.append(pokemonHeader, pokemonImg, pokemonType, pokemonAttack);
 }
 
 export default createPokemon;
